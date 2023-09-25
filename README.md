@@ -8,3 +8,5 @@ better README lol
 mine count and timer
 
 the ? case
+
+some optimization
