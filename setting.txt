@@ -1,0 +1,18 @@
+30 //x_lenght
+24 //y_lenght
+160 //nuber_of_mine
+
+//for easy mode
+8
+8
+10
+
+//for medium mode
+16
+16
+40
+
+//for hard mode 
+30
+16
+99
