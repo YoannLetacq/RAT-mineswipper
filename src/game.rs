@@ -20,7 +20,7 @@ pub fn game(x_case: i32 , y_case: i32 , number_mine: i32) {
     let video_subsystem = sdl_context.video().unwrap();
 
     let window = video_subsystem
-        .window("LA GROSSE MINE QUI VA T'ECLATER FRERO TROP DROLE MDRRR", width as u32, height  as u32)
+        .window("Minesweeper", width as u32, height  as u32)
         .position_centered()
         .build()
         .unwrap();
