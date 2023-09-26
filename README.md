@@ -47,8 +47,9 @@ To build and run the Minesweeper game, follow these steps:
 2. Clone this repository to your local machine using `git clone`.
 3. Open a terminal and navigate to the project directory.
 4. Build the game with the following command:
-- cargo build --release
+- `cargo build --release`
 - move setting.txt and assets/ to the application 
+5. Or run the code with `cargo run`
 
 
 ## Known Issues
