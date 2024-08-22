@@ -1,65 +1,36 @@
-# Minesweeper in Rust
+### Exercice Complémentaire : Ajout des Touches "F" et "G" pour Afficher et Cacher les Mines
 
-Welcome to Minesweeper in Rust! This project is a simple implementation of the classic Minesweeper game using the Rust programming language.
+#### Objectif
 
-## Table of Contents
+Ajouter deux fonctionnalités au jeu :
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [How to Play](#how-to-play)
-- [Building and Running](#building-and-running)
-- [Known Issues](#known-issues)
+1. **Touche "F"** : Permettre de révéler toutes les mines sur la grille sans terminer le jeu.
+2. **Touche "G"** : Permettre de cacher à nouveau toutes les mines révélées avec la touche "F".
 
-## Introduction
+#### Instructions
 
-Minesweeper is a classic single-player puzzle game where the player must uncover hidden mines on a grid while avoiding detonating any of them. It's a great way to challenge your logic and deduction skills.
+1. **Gestion de la Touche "F"** :
+   - Ajoutez la gestion de l'événement pour la touche "F" dans la boucle d'événements du jeu. Lorsque cette touche est pressée, toutes les mines doivent être révélées sur la grille sans que le jeu ne se termine.
 
-## Features
+2. **Gestion de la Touche "G"** :
+   - Ajoutez la gestion de l'événement pour la touche "G". Lorsque cette touche est pressée, toutes les mines précédemment révélées doivent être cachées à nouveau, sans affecter les autres cases ni terminer le jeu.
 
-- **Game Grid**: A grid of cells where you can uncover tiles.
-- **Mines**: Hidden mines are scattered across the grid.
-- **Numbers**: Numbers indicate how many mines are adjacent to a cell.
-- **Flagging**: You can flag cells that you suspect contain mines.
-- **Winning**: The game is won when all non-mined cells are uncovered. not implemented yet
-- **Losing**: The game is lost if you uncover a mine.
-- **Timer**: Keep track of your time to complete the game. not implemented yet 
-- **Question Mark**: Mark cells with a question mark when you're unsure. not implemented yet
+3. **Création de la Fonction de Masquage des Mines** :
+   - Implémentez une fonction `hide_all_mine` qui parcourt la grille et remet toutes les cases contenant des mines à l'état "hidden" si elles sont révélées.
 
-## How to Play
+4. **Testez la Fonctionnalité** :
+   - Testez ces fonctionnalités en démarrant une partie, en appuyant sur la touche "F" pour révéler les mines, puis sur la touche "G" pour les cacher à nouveau.
 
-1. Clone this repository to your local machine.
-2. Open your terminal and navigate to the project directory.
-3. Build the game using `cargo build`.
-4. Run the game with `cargo run`.
+#### Critères de Réussite
 
-Here are some basic controls:
+- La touche "F" doit révéler toutes les mines sans terminer le jeu.
+- La touche "G" doit cacher toutes les mines précédemment révélées sans terminer le jeu.
+- Le jeu doit continuer normalement après avoir utilisé les touches "F" et "G".
 
-- Left-click or A to uncover a cell.
-- Right-click or E to flag a cell.
-- Middle-click or Z to uncover all cells around a uncover cell .
-- The game will display your time, mine count, and the status of the game. that actualy a lie but i will make it true
+#### Scénarios à Tester
 
-## Building and Running
+- **Appui sur la touche "F"** : Toutes les mines doivent être révélées, mais le jeu doit continuer.
+- **Appui sur la touche "G"** : Toutes les mines révélées doivent être cachées à nouveau, mais le jeu doit continuer.
+- **Jeu normal** : Le joueur doit pouvoir continuer à jouer normalement après avoir révélé et caché les mines.
 
-To build and run the Minesweeper game, follow these steps:
-
-1. Make sure you have Rust and Cargo installed on your system.
-2. Clone this repository to your local machine using `git clone`.
-3. Open a terminal and navigate to the project directory.
-4. Build the game with the following command:
-- `cargo build --release`
-- move setting.txt and assets/ to the application 
-5. Or run the code with `cargo run`
-
-
-## Known Issues
-
-- No winning screen
-- No question mark case
-- No mine count and no timer
-- Some optimization 
-
-
-Thank you for playing Minesweeper in Rust!
-
-Happy mining!
+Bonne chance !
