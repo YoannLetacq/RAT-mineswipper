@@ -9,8 +9,9 @@ use sdl2::keyboard::Keycode;
 use sdl2::pixels::{Color};
 use std::time::Duration;
 
+
 pub fn game(x_case: i32 , y_case: i32 , number_mine: i32) {
-    
+
 
     let width: i32 = 32*x_case;
     let height: i32 = 32*y_case;
@@ -160,16 +161,15 @@ pub fn game(x_case: i32 , y_case: i32 , number_mine: i32) {
         
         canvas.set_draw_color(Color::RGB(0, 0, 0));
         canvas.clear();
-        // Mettez ici le code de votre jeu ou de votre application SDL2
         
         // Update
-      
-        
+
+
 
         // Render
         render(&mut canvas, Color::RGB(0, 0, 0), &texture , &mut all_rct , texture_location).unwrap();
 
-        
+
         std::thread::sleep(Duration::from_millis(16));
         canvas.present();
     }

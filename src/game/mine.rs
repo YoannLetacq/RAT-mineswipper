@@ -23,7 +23,7 @@ impl Case {
         }
     }
 }
- 
+
 
 pub fn render(canvas: &mut WindowCanvas, color: Color, texture: &Vec<Texture> , all_rect: &mut Vec<Vec<Case>> , texture_loc : [Rect; 14] ) -> Result<(), String>  {
     canvas.set_draw_color(color);
