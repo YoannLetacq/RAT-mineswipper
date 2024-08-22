@@ -151,6 +151,26 @@ pub fn game(x_case: i32, y_case: i32, number_mine: i32) {
                     stop = false;
                     first = true;
                 },
+
+                /*coriger exo
+                 */
+                Event::KeyDown {
+                    keycode: Some(Keycode::F),
+                    ..
+                } => {
+                    see_all_mine(&mut all_rct); // Appelle la fonction pour révéler toutes les mines
+                }
+                Event::KeyDown {
+                    keycode: Some(Keycode::G),
+                    ..
+                } => {
+                    hide_all_mine(&mut all_rct); // Appelle la fonction pour révéler toutes les mines
+                }
+/*
+              fin corrige exo
+                 */
+
+
                 // Quitter le jeu avec la touche Echap ou en fermant la fenêtre
                 Event::Quit { .. }
                 | Event::KeyDown {
